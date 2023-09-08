@@ -1,0 +1,203 @@
+Carwale Assesment 
+
+DataSet:
+https://docs.google.com/spreadsheets/d/1t8G3bokfRAOi1jLwccGTw6_JYGwS1ocMElbMyLhfT88
+
+Q1 A). In which month Accepted Ratio was the highest? Accepted Ratio = Accepted/Generated 
+Answer: Aug 2018
+Explanation: Q1A: In the first I use formulas to calculate Accepted Ratio
+First of all calculating the Accepted ratio by using the formula which is already provided.
+then use MAX function to find out highest value in the column and  then use MATCH function to find corresponding position and then use INDEX to find out corresponding month name.
+=MAX(C2:C13)
+=MATCH([cell with max value], C2:C13, 0)
+=INDEX(A2:A13, [cell with position])
+
+Q1 B). In which Quarter most leads were Generated? 
+Answer: Q1
+Explanation:First organize the data in Columns
+then use SUMIF formula to calculate total generated leads for each quarter and copy this formula and use for all the quarters and then use MAX function to find out maximum value from it and to find corresponding quarter we can use INDEX functions.
+=SUMIF(A2:A5, "Q1", B2:B5)
+=MAX(D2:D5)
+=INDEX(A2:A5, MATCH(E2, D2:D5, 0))
+
+Q1. C)- Please explain step by step approach how you reached the result and formulas to use in Excel.
+Q1A: In the first I use formulas to calculate Accepted Ratio
+First of all calculating the Accepted ratio by using the formula which is already provided.
+then use MAX function to find out highest value in the column and  then use MATCH function to find corresponding position and then use INDEX to find out corresponding month name.
+=MAX(C2:C13)
+=MATCH([cell with max value], C2:C13, 0)
+=INDEX(A2:A13, [cell with position])
+Q1B : 
+First organize the data in Columns
+then use SUMIF formula to calculate total generated leads for each quarter and copy this formula and use for all the quarters and then use MAX function to find out maximum value from it and to find corresponding quarter we can use INDEX functions.
+=SUMIF(A2:A5, "Q1", B2:B5)
+=MAX(D2:D5)
+=INDEX(A2:A5, MATCH(E2, D2:D5, 0))
+
+
+Q2. A) Looking at the Daily Pageviews and Users, what does the relation between them indicate? 
+Answer:Pageviews increase as Users increase
+Explanation: In most cases, as the number of users increases, the total Pageviews also tend to increase due to more people exploring the website.
+
+Q2B: Q2. B) Is it possible to have more Users than Pageviews? 
+Answer: Can't Say
+ Explanation:   Q2B: Yes, It is possible to have more users than pageviews on website. This can occur if users navigate through multiple pages during a single visit, resulting in a higher number of pageviews per user session. Additionally,  if your website offers interactive features, such as dynamic content or user generated activities, users might spend more time on a single page without generating additional pageviews. This can lead to a scenario where the number of users is higher than the total pageviews.
+                        No, It is not possible to have more users than pageviews. Pageviews are generated when users visit the website's content. Each pageview represents a user viewing page. Therefore, the number of pageviews can not be less than or equal to he number of users. In other words, the number of Users should always be less than or equal to the number of pageviews.
+
+Q2. C) - Please elaborate your response to Question 2B.
+Q2B: Yes, It is possible to have more users than pageviews on website. This can occur if users navigate through multiple pages during a single visit, resulting in a higher number of pageviews per user session. Additionally,  if your website offers interactive features, such as dynamic content or user generated activities, users might spend more time on a single page without generating additional pageviews. This can lead to a scenario where the number of users is higher than the total pageviews.
+                        No, It is not possible to have more users than pageviews. Pageviews are generated when users visit the website's content. Each pageview represents a user viewing page. Therefore, the number of pageviews can not be less than or equal to he number of users. In other words, the number of Users should always be less than or equal to the number of pageviews.
+
+
+Q3. A) From which source did we get maximum no. of leads in an hour? *
+Answer: Source_10
+Explanation:To determine which source generated the maximum number of leads in an hour, we need to examine the leads data for each source across different hours and identify the source with the highest count of leads in a single hour.
+Source_4: Maximum leads in an hour is 37.
+Source_13: Maximum leads in an hour is 17.
+Source_10: Maximum leads in an hour is 38.
+Source_2: Maximum leads in an hour is 25.
+
+Q3. B) Which source had the least number of leads in the entire day? *
+Answer:Source_14
+Explanation: To determine which source had the least number of leads in the entire day, we need to sum up the leads data for each source across all hours and identify the source with the lowest total leads.
+Source_6: Total leads for the day is 139.
+Source_14: Total leads for the day is 125.
+Source_11: Total leads for the day is 154.
+Source_7: Total leads for the day is 168.
+
+Q3. C) Why do we see more traffic(Leads) generated during afternoon compared to morning?
+The higher traffic generated during the afternoon compared to the morning could be due to various factors:
+1.Natural Human Behavior:
+People tend to be more active and engaged during the afternoon hours. Mornings might be dedicated to settling into work, commuting, and other tasks, whereas afternoons often see increased focus and productivity.
+2.Lunch Breaks:
+Many people take breaks around midday, allowing them to catch up on tasks, including online activities, in the afternoon.
+3.Distractions:
+People might have fewer distractions during the afternoon. Mornings can be busy with tasks that require immediate attention, leaving less time for online activities.
+4. Global Audience: 
+If the data is representative of a global audience, afternoon hours might align with periods when people in different time zones are awake and active, leading to increased online activity.
+5.Variety of Activities:
+Different activities might be favored during different times of the day. For instance, people might engage in work-related tasks in the morning and more leisurely activities in the afternoon.
+
+
+
+Q4. A) If we have to include all user-provided mileage data in the analysis, what would be better to use – Mean or Median – of these user-provided mileages, to be compared against Manufacturer-provided mileage? *
+Answer:Median
+Explanation:When dealing with user-provided mileage data that could potentially contain outliers or extreme values, it's often a good idea to use the median instead of the mean for comparison against the manufacturer-provided mileage. The median is less sensitive to outliers and extreme values, which means it's a more robust measure of central tendency in such cases.
+Using the median will give you a better sense of the typical user-provided mileage without being overly affected by unusually high or low values. However, it's always a good practice to consider both the mean and the median and possibly other summary statistics to get a comprehensive understanding of the data distribution.
+
+Q4. B) After removing the obvious Outlier value, what is the Standard Deviation(Sample) of the user-provided mileages? *
+Answer:2.09
+Explanation:
+             Here by removing the outlier value we have total 16 values 
+              first we have to calculate the mean 
+              here the mean value is : 10.875
+              then we have subtract the mean value from each value and then square of it 
+             After that summation perform on the each square value and we get total value 65.7496 
+             65.7496 / 15 samples : 4.3833 and after find out square root we get 2.094
+             standard deviation = s={\sqrt {\frac {\sum _{i=1}^{N}(x_{i}-{\overline {x}})^{2}}{N-1}}}
+
+
+Q4. C) Please explain your calculation in brief for Q4 A & B part.
+             Q4A: When dealing with user-provided mileage data that could potentially contain outliers (here 2000 from the data) or extreme values, it's often a good idea to use the median instead of the mean for comparison against the manufactured-provided mileage. The median is les sensitive to outliers and extreme values , which means it's more robust measure of central tendency in such cases. 
+             Using the median will give you better sense of the typical user-provided mileage without being overly affected by unusually high or low values. However , it's always a good practice to consider both the mean and the median and possibly other summary statistics to get a comprehensive understanding of the data distribution.
+
+             Q4B: Here by removing the outlier value we have total 16 values 
+              first we have to calculate the mean 
+              here the mean value is : 10.875
+              then we have subtract the mean value from each value and then square of it 
+             After that summation perform on the each square value and we get total value 65.7496 
+             65.7496 / 15 samples : 4.3833 and after find out square root we get 2.094
+             standard deviation = s={\sqrt {\frac {\sum _{i=1}^{N}(x_{i}-{\overline {x}})^{2}}{N-1}}}
+
+
+Q5. A) To compare India vs Mumbai by Body Styles, which data should be used for better visualization: Absolute numbers or Percentage? *
+Answers:Percentages
+Explanation: Absolute numbers have high variations than the percentage so it is eay to understand and can be useful for data visualization.
+
+Q5. B) Which Chart will be best to compare India vs Mumbai?  *
+Answer:Bar/Column Chart
+Explanation:A column chart or a bar chart is commonly used to compare values between two or more columns. This type of chart makes it easy to visualize and compare the values of different categories or groups side by side. The choice between a column chart (vertical bars) and a bar chart (horizontal bars) depends on the data and the presentation preferences.
+
+Q5. C) Please explain your thought process on your response to Q5 A & B? Do you think any other chart which could be used for Q.5 B?
+Q5A: To compare India vs Mumbai by Body Styles for better visualization, we can use Percentages. This allows us to compare the distribution of car body styles relative to the whole in more standardized manner, especially when dealing with different total numbers
+
+Q5.B: To compare India vs Mumbai by Body Styles the bar chart and column chart will be the best choice. This type of chart allows you to easily compare the absolute numbers or percentages of different body styles between two locations 
+A column chart or Bar chart is commonly used to compare values between two or more columns. This type of chart makes it easy to visualize and compare the values of different categories or groups side by side.
+The choice between column chart and bar chart depends on the data and the presentation preferences. 
+
+Do you think any other chart which could be used for Q.5B ?
+Yes we can use Pie chart.
+For comparing only percentage data, the pie chart would be the most suitable choice. Pie charts effective for displaying proportions and percentages of different categories in relation to whole.
+To compare India vs Mumbai from the dataset we should understand that the data present in Absolute number have variations the values present in India column is very high compare to Mumbai column so we not getting desired results from visualization process.
+That's why we use Percentage data for that and after that we use pie chart for better visualization of data.
+I open the Power BI desktop version in that I have used transform data to remove top 9 rows which contains Absolute numbers and then visualize the entire data in Pie chart. 
+When we have data presented in percentage format and want to visualize the proportions a pie chart or donut chart can be useful. These types of charts display the relative categories as slices of circular chart. Each slice represents the proportional or percentage of the whole.
+But why we are using here pie chart because of less amount of data. Pie chart sometime be less effective especially dealing with large number of categories.
+
+
+Q6) What is Analytics and how does it help a business to grow?
+Analytics is the process of collecting, processing, and analyzing data to gain insights and make informed decisions. 
+
+In the context of business, analytics involves using data to understand various aspects of the company's operations, customers, and market trends.
+
+1.Customer Insights:
+Analytics can help you understand user behavior on your platform. By analyzing data like search patterns, click-through rates, and time spent on different sections, you can tailor your offerings to match user preferences and improve their experience.
+Businesses can gain a deeper understanding of their customers' behavior, preferences, and needs. This knowledge can be used to tailor products, services, and marketing efforts.
+
+2.Personalization:
+Utilizing analytics, you can offer personalized recommendations to users based on their browsing history and preferences. This enhances user engagement and satisfaction.
+
+3.Market Trends:
+By analyzing data from user searches and interactions, you can identify emerging car trends and customer preferences. This information can guide your content creation and provide insights for your business strategy.
+
+4.Inventory Management:
+Analytics can help you track which car models are generating the most interest. This information can aid dealerships in optimiZing their inventory to match demand, reducing overstocking or understocking issues.
+
+5.Marketing Strategy:
+Analytics provides data on the effectiveness of your marketing campaigns. You can determine which campaigns are driving the most traffic, leads, and conversions, allowing you to allocate resources more efficiently.
+Analytics allows businesses to create personalized marketing campaigns that resonate with individual customers, increasing engagement and conversion rates.
+
+6.Conversion Rate Optimization:
+By analyzing user behavior on your platform, you can identify bottlenecks in the car buying process. This helps in optimizing the user journey, increasing conversion rates, and reducing drop-offs.
+Analytics helps streamline operations by identifying inefficiencies and bottlenecks in processes, leading to improved resource allocation and cost savings.
+
+7. User Feedback Analysis:
+Analytics can aggregate and analyze user reviews and feedback. This insight can guide improvements in your services, enhancing customer satisfaction and loyalty.
+Analytics can analyze customer feedback and reviews to identify pain points and areas for improvement in customer service, leading to higher satisfaction and repeat business.
+
+8.Performance Measurement:
+Analytics helps you track key performance indicators (KPIs) such as website traffic, bounce rates, and conversion rates. These metrics provide a clear picture of your business's overall health and growth trajectory.
+Analytics provides metrics to measure the performance of various aspects of the business, helping in setting goals and tracking progress.
+
+9.Competitor Analysis:
+Through analytics, you can monitor the performance of your competitors. This information can help you identify areas where you can differentiate yourself and capture a larger share of the market.
+Effective use of analytics can give a competitive edge by enabling businesses to react faster to market changes and make more accurate predictions.
+
+10. Expansion Opportunities:
+ By analyzing user demographics and regional preferences, you can identify potential new markets for expansion and tailor your offerings to suit those markets.
+Analytics can provide insights into potential markets where the business can expand. By analyzing demographics, economic conditions, and vehicle ownership patterns, the business can make informed decisions about new locations.
+
+11. Informed Decision-Making:
+Analytics provides data-driven insights, allowing businesses to make informed decisions rather than relying on guesswork or intuition.
+
+12. Risk Management:
+Through data analysis, businesses can identify and mitigate potential risks, such as fraud or supply chain disruptions.
+
+13.Product Development:
+Insights gained from analytics can guide product and service development, ensuring they align with customer needs and preferences.
+
+14.Predictive Analysis:
+Analytics can predict future trends and outcomes based on historical data, assisting businesses in planning and strategizing.
+
+15.Supply Chain Optimization: Analytics can help in tracking the supply chain efficiency, ensuring timely delivery of parts and components. This minimizes production delays and improves overall operations.
+
+In summary, analytics empowers CarWale with valuable insights that drive data-driven decision-making, enhance user experiences, refine marketing strategies, and optimize operations. By harnessing the power of data, you can continue to provide a seamless and valuable car research and buying experience, further accelerating your business growth.
+
+
+
+
+
+
+
+
+
